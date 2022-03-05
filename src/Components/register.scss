@@ -1,0 +1,32 @@
+
+@import "../scss/index.scss";
+.register{
+
+    border: 3px solid pink;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: 100%;
+    padding: 1em;
+    border-radius: 4px;
+
+    &-input{
+        padding: 5px;
+        outline: none;
+    }
+
+    label{
+        margin-left: 5px;
+    }
+
+    &-btn{
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: blueviolet;
+        color: #fff;
+        padding: 1em;
+        border-radius: 8px;
+    }
+   
+}
