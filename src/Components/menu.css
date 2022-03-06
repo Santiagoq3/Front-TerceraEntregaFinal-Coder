@@ -39,3 +39,7 @@ button{
     width: 30%;
     justify-content: space-evenly;
 }
+
+.menutop-right__logout{
+    cursor: pointer;
+}

@@ -28,10 +28,11 @@ export const Register = () => {
 
         
         const result = await registerApi(inputsRegister)
-
+        console.log(result)
         if(result.ok){
-            setalertMessage(true)
+            alert(result.msg)
         }else{
+            alert(result.error)
         }
         setinputsRegister({
             name: "",
@@ -43,9 +44,7 @@ export const Register = () => {
     const  {name,email,password} = inputsRegister
   return (
     <div>
-        {
-            alertMessage && <Alert type='success' description="Registrado correctamente" />
-        }
+        
         <form onSubmitCapture={handleSubmit} className="register">
             <label>Nombre:</label>
             <input className='register-input' type="text" name='name' value={name} placeholder="Ingrese su nombre" onChange={handleInputChange} />

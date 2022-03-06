@@ -5,20 +5,24 @@ import {
   Route,
 } from "react-router-dom";
 import { routes } from './Routes/routes.config';
+import { AuthContextProvider } from './Context/AuthContextProvider';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
+    <AuthContextProvider >
+      <BrowserRouter>
+        <Routes>
 
-       {
-         routes.map(route=>{
-           return <Route path={route.path} element={<route.Component/>} />
-         })
-       }
-      </Routes>
+          {
+            routes.map(route=>{
+              return <Route path={route.path} element={<route.Component/>} />
+            })
+          }
+        </Routes>
 
     </BrowserRouter>
+    </AuthContextProvider>
+    
   );
 }
 

@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {Layout} from "antd"
 import "./layoutadmin.scss"
 import { Menu } from '../Components/Menu'
-
+import { useNavigate } from 'react-router-dom'
+import { AuthContext } from '../Context/AuthContextProvider'
 
 export const LayoutAdmin = () => {
+
+  const navigate = useNavigate()
+
+  const {user,isLoading}= useContext(AuthContext)
+  // const user = null
+
+  console.log(user,isLoading);
+      
+  if(!user && !isLoading){
+              
+      navigate("/login-register")
+              
+  }
 
     const {Header,Content,Footer} = Layout
 
