@@ -36,14 +36,13 @@ export const Login = () => {
         e.preventDefault()
 
         const result = await loginApi(inputsLogin)
-        console.log(result)
         if(result.ok){
             alert(result.msg)
             localStorage.setItem("token",result.token)
 
-            window.location.href= "/admin";
+            window.location.href= "/admin/products";
         }else{
-            alert(result.error)
+            alert(result.msg.message)
         }
 
     }

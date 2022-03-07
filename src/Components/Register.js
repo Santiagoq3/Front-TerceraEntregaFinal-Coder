@@ -32,7 +32,8 @@ export const Register = () => {
         if(result.ok){
             alert(result.msg)
         }else{
-            alert(result.error)
+            console.log(result)
+            alert(result.msg.message)
         }
         setinputsRegister({
             name: "",

@@ -12,15 +12,22 @@ function App() {
     <AuthContextProvider >
       <BrowserRouter>
         <Routes>
-
           {
             routes.map(route=>{
-              return <Route path={route.path} element={<route.Component/>} />
+              return <Route path={route.path} element={<route.Component/>} >
+                
+                    {
+                      route.routes.map(ruta=>{
+                        return <Route path={ruta.path} element={<ruta.Component />} />
+                      })
+                    }
+                
+                 </Route>
             })
           }
+          
         </Routes>
-
-    </BrowserRouter>
+      </BrowserRouter>
     </AuthContextProvider>
     
   );

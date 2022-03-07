@@ -1,5 +1,5 @@
 {
-  "homepage": "http://localhost:3000/admin",
+  "homepage": "http://localhost:3000/admin/products",
   "name": "TerceraEntregaProyectoFinalFront",
   "version": "0.1.0",
   "private": true,

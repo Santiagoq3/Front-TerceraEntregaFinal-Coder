@@ -16,7 +16,7 @@ export const Menu = () => {
         </NavLink>
       </div>
       <div className='menutop-right'>
-        <i class="fas fa-shopping-cart"></i>
+        <i className="fas fa-shopping-cart"> 0</i>
         <p className='menutop-right__logout' onClick={logOut}>Logout</p>
       </div>
     </div>
