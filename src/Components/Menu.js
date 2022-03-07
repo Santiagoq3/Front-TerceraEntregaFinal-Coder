@@ -1,9 +1,12 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import { logOutApi } from '../api/auth';
+import { CartContext } from '../Context/CartContextProvider';
 import "./menu.css"
 export const Menu = () => {
 
+  const {cart} = useContext(CartContext)
+  
   const logOut = ()=>{
     logOutApi();
     window.location.reload()
@@ -16,7 +19,11 @@ export const Menu = () => {
         </NavLink>
       </div>
       <div className='menutop-right'>
-        <i className="fas fa-shopping-cart"> 0</i>
+        <NavLink to="/cart">
+
+          <i className="fas fa-shopping-cart"> {cart.length}</i>
+
+        </NavLink>
         <p className='menutop-right__logout' onClick={logOut}>Logout</p>
       </div>
     </div>

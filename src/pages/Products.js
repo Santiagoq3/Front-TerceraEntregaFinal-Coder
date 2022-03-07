@@ -22,8 +22,8 @@ export const Products = () => {
 
         
             {
-                products.map(product=>{
-                    return <Product product={product} />
+                products.map((product, indx)=>{
+                    return <Product key={indx} product={product} />
                 })
             }
         

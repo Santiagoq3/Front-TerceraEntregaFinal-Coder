@@ -1,4 +1,5 @@
 import { LayoutAdmin } from "../Layouts/LayoutAdmin"
+import { Cart } from "../pages/Cart"
 import { LoginAndRegister } from "../pages/LoginAndRegister"
 import { Products } from "../pages/Products"
 
@@ -29,5 +30,14 @@ export const routes = [
             }
         ]
 
+    },
+    {
+        path:"/cart",
+        Component: Cart,
+        routes: [
+            {
+                
+            }
+        ]
     }
 ]

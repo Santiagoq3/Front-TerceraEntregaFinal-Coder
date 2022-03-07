@@ -17,7 +17,6 @@ export const LayoutAdmin = () => {
       navigate("/login-register")
               
   }
-  console.log(user)
     const {Header,Content,Footer} = Layout
 
   return (
