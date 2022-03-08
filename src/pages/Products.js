@@ -15,15 +15,14 @@ export const Products = () => {
         .catch((err)=> console.log(err))
     },[])
 
-    console.log(products)
     
   return (
     <div className='products'>
 
         
             {
-                products.map((product, indx)=>{
-                    return <Product key={indx} product={product} />
+                products.map((product, index)=>{
+                    return <Product key={index} product={product} />
                 })
             }
         

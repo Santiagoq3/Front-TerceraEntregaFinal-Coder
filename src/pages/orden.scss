@@ -1,0 +1,25 @@
+
+
+.orden{
+    padding: 1em;
+}
+
+
+.orden-product{
+    border: 3px solid red;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-img{
+        flex: 0.5;
+    }
+
+}
+
+
+.orden-thx{
+    font-size: 2rem;
+}
+span{
+    cursor: pointer;
+}

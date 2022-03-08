@@ -1,10 +1,25 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { createOrderApi } from '../api/order'
+import { AuthContext } from '../Context/AuthContextProvider'
 import { CartContext } from '../Context/CartContextProvider'
 import "./cart.scss"
 export const Cart = () => {
 
-  const {cart,removeProduct} = useContext(CartContext)
+  const {cart,removeProduct,total} = useContext(CartContext)
+  const {user} = useContext(AuthContext)
+  const navigate = useNavigate()
+
+  const createOrder = async()=>{
+
+   const result = await createOrderApi(user,cart);
+   console.log(result);
+    if(result){
+      alert("orden generada correctamente")
+      navigate(`/orden/${result.result._id}`)
+    }
+  }
+
   return (
     <div className='cart'>
             <h1>Shopping Cart</h1>
@@ -34,12 +49,12 @@ export const Cart = () => {
                         <div className='cart_comprar_total'>
 
                             <p>Total</p>
-                            <p>$ 1000</p>
+                            <p>$ {total}</p>
                         </div>
                         
-                        <Link to="/checkout">
-                                <p className='cart_btn-comprar'>Generar orden</p>
-                        </Link>
+                       
+                        <p onClick={()=> createOrder()} className='cart_btn-comprar'>Confirmar orden</p>
+                        
                         
                         <Link to="/admin/products" className='cart_continuar-comprando' >
                             <p style={{color: "black"}}>o Continuar Comprando</p> 

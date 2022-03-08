@@ -10,7 +10,7 @@ export const CartContextProvider = ({children}) => {
 
     // const token = getAccessToken()
     const [cart, setCart] = useState([])
-
+    const [total, setTotal] = useState(0)
 
     
     const addToCart = (item,)=>{
@@ -28,7 +28,7 @@ export const CartContextProvider = ({children}) => {
   }
 
     useEffect(()=>{
-      console.log(cart)
+      checkTotal()
     },[cart])
 
     const removeProduct = (id)=>{
@@ -43,20 +43,20 @@ export const CartContextProvider = ({children}) => {
       setCart([])
   }
 
-  // const checkTotal = ()=>{
-  //     let checkTotal = 0;
-  //     cart.map(item => {
-  //         checkTotal = checkTotal +(item.item.precio * item.quantity)
-  //         setTotal(checkTotal)
-  //     })
-  // }
+  const checkTotal = ()=>{
+      let checkTotal = 0;
+      cart.map(item => {
+          checkTotal = checkTotal + item.price
+          setTotal(checkTotal)
+      })
+  }
 
 
   const isInCart = (item)=>{
       return cart.some(producto =>producto._id === item._id )
   }
   return (
-    <CartContext.Provider value={{cart,setCart,addToCart,removeProduct}}>
+    <CartContext.Provider value={{cart,setCart,addToCart,removeProduct,total,clearCart}}>
           {children}
     </CartContext.Provider>
   )
