@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Front-TerceraEntregaFinal-Coder/static/css/main.fb9fbe00.css",
+    "main.js": "/Front-TerceraEntregaFinal-Coder/static/js/main.3fb34f26.js",
+    "index.html": "/Front-TerceraEntregaFinal-Coder/index.html",
+    "main.fb9fbe00.css.map": "/Front-TerceraEntregaFinal-Coder/static/css/main.fb9fbe00.css.map",
+    "main.3fb34f26.js.map": "/Front-TerceraEntregaFinal-Coder/static/js/main.3fb34f26.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb9fbe00.css",
+    "static/js/main.3fb34f26.js"
+  ]
+}
