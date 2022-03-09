@@ -1,6 +1,6 @@
 import './App.css';
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -12,7 +12,7 @@ function App() {
   return (
     <AuthContextProvider >
       <CartContextProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             {
               routes.map(route=>{
@@ -28,7 +28,7 @@ function App() {
               })
             }
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </CartContextProvider>
     </AuthContextProvider>
     
