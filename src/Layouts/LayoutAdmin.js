@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import {Layout} from "antd"
 import "./layoutadmin.scss"
 import { Menu } from '../Components/Menu'
@@ -11,12 +11,17 @@ export const LayoutAdmin = () => {
   const navigate = useNavigate()
 
   const {user,isLoading}= useContext(AuthContext)
-      
-  if(!user && !isLoading){
+  
+  
+
+    if(!user && !isLoading){
               
       navigate("/login-register")
               
-  }
+    }
+
+  
+  
     const {Header,Content,Footer} = Layout
   console.log(user)
   return (
@@ -29,8 +34,9 @@ export const LayoutAdmin = () => {
               <Menu /> 
             </Header>
             <Content className='layout-admin__content'>
-              <p>Bievenid@ {user?.name}, este es nuestro catalogo</p>
+             
               <Outlet />
+              
             </Content>
             <Footer className='layout-admin__footer'>Footer</Footer>
         </Layout>

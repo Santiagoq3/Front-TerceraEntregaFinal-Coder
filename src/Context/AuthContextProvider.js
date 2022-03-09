@@ -7,7 +7,7 @@ export const AuthContext = React.createContext()
 
 export const AuthContextProvider = ({children}) => {
 
-
+  const accessToken = getAccessToken();
   const [user, setUser] = useState({
     user: null,
     isLoading: true
@@ -27,7 +27,7 @@ export const AuthContextProvider = ({children}) => {
 
 const checkUserLogin = (setuser)=>{
   const accessToken = getAccessToken();
-
+  console.log(accessToken)
   if(!accessToken){
 
     
