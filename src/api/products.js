@@ -7,9 +7,11 @@ export const getProdutsApi = ()=>{
 
     const url  = `${path}/product/products`;
 
-
+    
     return fetch(url)
     .then((res)=> res.json())
     .then((data)=> data)
-    .then((err)=> err)
+    .catch((err)=> err)
+
+
 }

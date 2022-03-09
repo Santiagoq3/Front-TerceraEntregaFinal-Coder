@@ -49,5 +49,14 @@ export const routes = [
                 
             }
         ]
+    },
+    {
+        path: "*",
+        Component: LayoutAdmin,
+        routes:[
+            {
+                
+            }
+        ]
     }
 ]

@@ -18,17 +18,18 @@ export const LayoutAdmin = () => {
               
   }
     const {Header,Content,Footer} = Layout
-
+  console.log(user)
   return (
     <Layout>
-        <h1>Bievenido, {user?.name}.</h1>
 
+        
         <Layout className='layoutadmin'>
 
             <Header className='layout-admin__header'>
               <Menu /> 
             </Header>
             <Content className='layout-admin__content'>
+              <p>Bievenid@ {user?.name}, este es nuestro catalogo</p>
               <Outlet />
             </Content>
             <Footer className='layout-admin__footer'>Footer</Footer>

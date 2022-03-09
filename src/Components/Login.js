@@ -40,7 +40,7 @@ export const Login = () => {
             alert(result.msg)
             localStorage.setItem("token",result.token)
 
-            window.location.href= "/admin/products";
+            navigate("/admin/products")
         }else{
             alert(result.msg.message)
         }
