@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Front-TerceraEntregaFinal-Coder/static/css/main.fb9fbe00.css",
-    "main.js": "/Front-TerceraEntregaFinal-Coder/static/js/main.6fc0ca88.js",
+    "main.js": "/Front-TerceraEntregaFinal-Coder/static/js/main.95c3a2ea.js",
     "index.html": "/Front-TerceraEntregaFinal-Coder/index.html",
     "main.fb9fbe00.css.map": "/Front-TerceraEntregaFinal-Coder/static/css/main.fb9fbe00.css.map",
-    "main.6fc0ca88.js.map": "/Front-TerceraEntregaFinal-Coder/static/js/main.6fc0ca88.js.map"
+    "main.95c3a2ea.js.map": "/Front-TerceraEntregaFinal-Coder/static/js/main.95c3a2ea.js.map"
   },
   "entrypoints": [
     "static/css/main.fb9fbe00.css",
-    "static/js/main.6fc0ca88.js"
+    "static/js/main.95c3a2ea.js"
   ]
 }
