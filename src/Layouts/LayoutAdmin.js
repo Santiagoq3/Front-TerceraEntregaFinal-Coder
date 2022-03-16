@@ -10,16 +10,16 @@ export const LayoutAdmin = () => {
 
   const navigate = useNavigate()
 
-  const {user,isLoading}= useContext(AuthContext)
+  const {user}= useContext(AuthContext)
   
   
+    
 
-    if(!user && !isLoading){
+      if(!user.user){
               
-      navigate("/login-register")
-              
-    }
-
+        navigate("/login-register")
+                
+      }
   
   
     const {Header,Content,Footer} = Layout

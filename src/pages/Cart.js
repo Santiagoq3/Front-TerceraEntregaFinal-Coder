@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { createOrderApi } from '../api/order'
 import { AuthContext } from '../Context/AuthContextProvider'
@@ -7,11 +7,11 @@ import "./cart.scss"
 export const Cart = () => {
 
   const {cart,removeProduct,total} = useContext(CartContext)
-  const {user} = useContext(AuthContext)
+  const {user,setRefresh} = useContext(AuthContext)
   const navigate = useNavigate()
 
   const createOrder = async()=>{
-
+    console.log({user})
    const result = await createOrderApi(user,cart);
    console.log(result);
     if(result){
@@ -19,6 +19,11 @@ export const Cart = () => {
       navigate(`/orden/${result.result._id}`)
     }
   }
+
+  useEffect(()=>{
+
+    setRefresh(true)
+  },[])
 
   return (
     <div className='cart'>

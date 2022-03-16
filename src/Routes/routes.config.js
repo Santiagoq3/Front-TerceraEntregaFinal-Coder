@@ -52,7 +52,7 @@ export const routes = [
     },
     {
         path: "*",
-        Component: LayoutAdmin,
+        Component: LoginAndRegister,
         routes:[
             {
                 

@@ -8,18 +8,19 @@ export const AuthContext = React.createContext()
 export const AuthContextProvider = ({children}) => {
 
   const accessToken = getAccessToken();
+  const [refresh, setRefresh] = useState(false)
   const [user, setUser] = useState({
     user: null,
-    isLoading: true
   })
 
   useEffect(()=>{
 
     checkUserLogin(setUser)
     
-  },[])
+  },[refresh])
+  console.log(user)
   return (
-    <AuthContext.Provider value={user}>
+    <AuthContext.Provider value={{user,setRefresh}}>
       {children}
     </AuthContext.Provider>
   )
@@ -34,13 +35,11 @@ const checkUserLogin = (setuser)=>{
           logOutApi();
           setuser({
               user:null,
-              isLoading: false
           })
      
   }else{
       setuser({
           user: jwtDecode(accessToken),
-          isLoading: false
       })
   }
 }
