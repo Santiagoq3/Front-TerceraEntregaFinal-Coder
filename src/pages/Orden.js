@@ -36,6 +36,7 @@ export const Orden = () => {
 
                <h1>Detalle del orden</h1>
                 <p>Orden numero : {orden.ordernum} - {orden.timestamp}</p>
+                <p>Muchas por la compra {orden.user.name}!</p>
                 <div className='orden-productos'>
                     {
                         orden.products.map((product,idx) =>{

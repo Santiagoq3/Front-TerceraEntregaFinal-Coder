@@ -5,7 +5,7 @@ export const pathHeroku = "https://tercera-back-entregacoderhouse.herokuapp.com"
 export const getProdutsApi = ()=>{
 
 
-    const url  = `${pathHeroku}/product/products`;
+    const url  = `${path}/product/products`;
 
     
     return fetch(url)

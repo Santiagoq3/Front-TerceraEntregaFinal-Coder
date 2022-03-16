@@ -7,7 +7,7 @@ export const pathHeroku = "https://tercera-back-entregacoderhouse.herokuapp.com"
 export const createOrderApi = (user,products)=>{
 
 
-    const url = `${pathHeroku}/order/create-order/${user.user._id}`
+    const url = `${path}/order/create-order/${user.user._id}`
 
 
     const params = {
@@ -27,7 +27,7 @@ export const createOrderApi = (user,products)=>{
 
 export const getOrderApi = (id)=>{
 
-    const url = `${pathHeroku}/order/get-order/${id}`;
+    const url = `${path}/order/get-order/${id}`;
 
 
     

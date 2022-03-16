@@ -44,7 +44,6 @@ export const Cart = () => {
                             </div>
                             <p>descripcion: {item.description}</p>
                             <div className='cart_container-bottom'>
-                                <p>Cantidad: 0</p>
                                 <button onClick={()=>removeProduct(item._id)} >Remove</button>
                             </div>
                         </li>

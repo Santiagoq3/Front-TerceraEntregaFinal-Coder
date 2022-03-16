@@ -1,5 +1,5 @@
-import React, { Fragment, useContext } from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import React, { useContext } from 'react'
+import { NavLink } from 'react-router-dom';
 import { logOutApi } from '../api/auth';
 import { CartContext } from '../Context/CartContextProvider';
 import "./menu.css"
