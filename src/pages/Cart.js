@@ -53,7 +53,12 @@ export const Cart = () => {
                         </div>
                         
                        
-                        <p onClick={()=> createOrder()} className='cart_btn-comprar'>Confirmar orden</p>
+                        <p onClick={async()=> {
+
+                           const result= await createOrder();
+
+                           console.log(result)
+                        }} className='cart_btn-comprar'>Confirmar orden</p>
                         
                         
                         <Link to="/admin/products" className='cart_continuar-comprando' >
