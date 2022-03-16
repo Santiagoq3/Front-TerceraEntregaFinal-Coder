@@ -1,9 +1,9 @@
-
+export const pathHeroku = "https://tercera-back-entregacoderhouse.herokuapp.com"
 export const path = "http://localhost:8080";
 
 export const loginApi = (data)=>{
 
-    const url = `${path}/auth/login`;
+    const url = `${pathHeroku}/auth/login`;
 
 
     const params = {
@@ -23,7 +23,7 @@ export const loginApi = (data)=>{
 
 export const registerApi = (data)=>{
 
-    const url = `${path}/auth/register`;
+    const url = `${pathHeroku}/auth/register`;
 
     const params ={
         method: "POST",

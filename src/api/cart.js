@@ -1,10 +1,10 @@
 
  const path = "http://localhost:8080";
 
-
+ export const pathHeroku = "https://tercera-back-entregacoderhouse.herokuapp.com"
 export const createCartApi = (userID)=>{
 
-    const url = `${path}/cart/createcart/${userID}`;
+    const url = `${pathHeroku}/cart/createcart/${userID}`;
 
 
     const params = {
