@@ -33,8 +33,6 @@ export const CartContextProvider = ({children}) => {
 
     const removeProduct = (id)=>{
 
-      // console.log(id)
-      // console.log(Cart.)
       setCart(cart.filter(item => item._id !== id))
 
   }
@@ -62,9 +60,3 @@ export const CartContextProvider = ({children}) => {
   )
 }
 
-
-const createCart = async(user)=>{
-
-  const result = await createCartApi(user._id)
-  console.log(result)
-}

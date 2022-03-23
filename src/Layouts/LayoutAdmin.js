@@ -18,9 +18,7 @@ export const LayoutAdmin = () => {
                 
       }
   
-  
     const {Header,Content,Footer} = Layout
-  console.log(user)
   return (
     <Layout>
 

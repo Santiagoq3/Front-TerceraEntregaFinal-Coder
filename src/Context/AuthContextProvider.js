@@ -18,7 +18,6 @@ export const AuthContextProvider = ({children}) => {
     checkUserLogin(setUser)
     
   },[refresh])
-  console.log(user)
   return (
     <AuthContext.Provider value={{user,setRefresh}}>
       {children}
@@ -28,7 +27,6 @@ export const AuthContextProvider = ({children}) => {
 
 const checkUserLogin = (setuser)=>{
   const accessToken = getAccessToken();
-  console.log(accessToken)
   if(!accessToken){
 
     

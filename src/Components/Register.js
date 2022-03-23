@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import "./register.scss"
-import { Form, Input, Button, Checkbox,Alert } from 'antd';
-import {MailOutlined,LockOutlined} from '@ant-design/icons';
 import { registerApi } from '../api/auth';
-import { toast } from 'react-toastify';
 
 
 export const Register = () => {
@@ -13,8 +10,6 @@ export const Register = () => {
         email: "",
         password: ""
     })
-
-    const [alertMessage, setalertMessage] = useState(false)
 
     const handleInputChange = (e)=>{
 
