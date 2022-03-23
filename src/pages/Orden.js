@@ -36,7 +36,7 @@ export const Orden = () => {
 
                <h1>Detalle del orden</h1>
                 <p>Orden numero : {orden.ordernum} - {orden.timestamp}</p>
-                <p>Muchas por la compra {orden.user.name}!</p>
+                <p>Muchas gracias por la compra {orden.user.name}!</p>
                 <div className='orden-productos'>
                     {
                         orden.products.map((product,idx) =>{
@@ -54,7 +54,7 @@ export const Orden = () => {
                     }
                 </div>
                 <p className='orden-thx'>Muchas Gracias por su compra! Nos comunicaremos con usted Pronto</p>
-                <span onClick={()=> handleBack()}>Volver al home</span>
+                <span className='btn-back' onClick={()=> handleBack()}>Volver al home</span>
 
             </>
             

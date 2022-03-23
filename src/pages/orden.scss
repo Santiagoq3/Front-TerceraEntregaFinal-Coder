@@ -12,6 +12,7 @@
 
     &-img{
         flex: 0.5;
+        max-width: 400px;
     }
 
 }
@@ -22,4 +23,11 @@
 }
 span{
     cursor: pointer;
+}
+
+.btn-back{
+    background-color: rgb(77, 77, 167);
+    padding: 1em;
+    border-radius: 8px;
+    color: #fff;
 }
