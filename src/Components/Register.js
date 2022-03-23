@@ -3,6 +3,7 @@ import "./register.scss"
 import { Form, Input, Button, Checkbox,Alert } from 'antd';
 import {MailOutlined,LockOutlined} from '@ant-design/icons';
 import { registerApi } from '../api/auth';
+import { toast } from 'react-toastify';
 
 
 export const Register = () => {
@@ -26,14 +27,11 @@ export const Register = () => {
     const handleSubmit = async(e)=>{
         e.preventDefault()
 
-        
         const result = await registerApi(inputsRegister)
-        console.log(result)
         if(result.ok){
             alert(result.msg)
         }else{
-            console.log(result)
-            alert(result.msg.message)
+            alert(result.msg.msg)
         }
         setinputsRegister({
             name: "",

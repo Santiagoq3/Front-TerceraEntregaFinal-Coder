@@ -12,9 +12,6 @@ export const LayoutAdmin = () => {
 
   const {user}= useContext(AuthContext)
   
-  
-    
-
       if(!user.user){
               
         navigate("/login-register")
